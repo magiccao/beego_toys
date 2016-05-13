@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<title>clothes size statistics</title>
+	<link rel="stylesheet" type="text/css" href="css/clothes.css" />
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<h1>健走活动衣服尺码统计</h1>
+	
+	<div class="page">
+		<div class="statistics">
+		<form action="/statistics" method="post" name="frmStatistics">
+			<table>
+				<tr>
+					<td class="tableHeader">qtalk</td>
+					<td><input type="text" size="20" name="qtalk" /></td>
+				</tr>
+                <tr>
+                    <td class="tableHeader">办公区</td>
+                    <td><select name="office">
+                        <option selected="selected" value="">选择办公区</option>
+                        <option value="维亚">维亚</option>
+                        <option value="东升">东升</option>
+                        <option value="互联网">互联网</option>
+                        <option value="新中关">新中关</option>
+                        <option value="五道口">五道口</option>
+                        <option value="清华同方">清华同方</option>
+                        <option value="电子大厦">电子大厦</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="tableHeader">部门</td>
+                    <td><select name="department">
+                        <option selected="selected" value="">选择部门</option>
+                        <option value="平台部">平台部</option>
+                        <option value="机票">机票</option>
+                        <option value="酒店">酒店</option>
+                        <option value="车车">车车</option>
+                        <option value="门票">门票</option>
+                        <option value="度假">度假</option>
+                        <option value="火车票">火车票</option>
+                        <option value="汽车票">汽车票</option>
+                        <option value="攻略">攻略</option>
+                        <option value="目的地">目的地</option>
+                        <option value="金融">金融</option>
+                        <option value="创新">创新</option>
+                    </select></td>
+                </tr>
+				<tr>
+					<td class="tableHeader">款式</td>
+					<td><input type="radio" name="size" value="male" />男装 &nbsp; <input type="radio" name="size" value="female" />女装</td>
+				</tr>
+			</table>
+			<div class="submit"><input type="submit" name="submit" id="submit" value="提交" /></div>
+		</form>
+		</div>
+	
+		<div class="result">
+			<form action="/show" method="get" name="frmShow" target="result">
+				<input type="submit" value="展示结果" />
+			</form>
+			<iframe frameborder="0" name="result" src="/show"></iframe>
+		</div>
+	</div>
+</body>
+</html>
